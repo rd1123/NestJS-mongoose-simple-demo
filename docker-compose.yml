@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  db:
+    container_name: mongo_test
+    volumes:
+      - chat_db_data:/data/db
+    restart: always
+    image: mongo:4.0
+    ports:
+      - '5426:27017'
+volumes:
+  chat_db_data:
